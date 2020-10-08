@@ -3,6 +3,10 @@
 
 /* Global */
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +55,6 @@ a.button {
 a.button:hover,
 input[type="submit"]:hover {
   background-color: #2ceac4;
-  transform: scale(1.1);
   color: #000;
 }
 
@@ -365,11 +368,12 @@ input[type="submit"] {
   color: #007bff;
   margin: 0 10px;
   font-size: 35px;
+  transition: .2s;
 }
 
 #social-media a:hover {
   color: #2ceac4;
-  transform: scale(1.1);
+  transform: translateY(-5px);
 }
 
 
@@ -383,10 +387,17 @@ input[type="submit"] {
   height: 10vh;
 }
 
-#footer p {
+#footer a {
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
+  color: #333;
+  transition: .2s;
+}
+
+#footer a:hover {
+  color: #007bff;
+  text-decoration: none;
 }
 
 
@@ -464,7 +475,7 @@ input[type="submit"] {
     flex-basis: 100%;
   }
 
-  #footer p {
+  #footer a {
     font-size: 12px;
   }
 }
