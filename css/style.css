@@ -14,7 +14,7 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
-body {
+.container {
   margin: 0 auto;
 }
 
@@ -41,12 +41,12 @@ section {
 
 a.button {
   display: inline-block;
-  max-width: 180px;
+  max-width: 200px;
   text-transform: uppercase;
   border: 1px solid #007bff;
   color: #000;
   /* background-color: #333; // ten kolor nie pasuje/transparent? */
-  margin: 20px;
+  margin: 20px auto;
   padding: 10px 20px;
   text-decoration: none;
   transition: .2s;
@@ -136,7 +136,7 @@ input[type="submit"]:hover {
 
 #main-nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
   margin: 0 auto;
 }
@@ -150,10 +150,10 @@ input[type="submit"]:hover {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
-  /* margin: 0 60px; */
   cursor: pointer;
   font-size: 18px;
   transition: .2s;
+  padding: 5px 30px;
 }
 
 #main-nav a:hover {
@@ -378,18 +378,19 @@ input[type="submit"] {
 
 
 /* #footer */
-
 #footer {
+  background-color: #f2f1ed;
+}
+
+#footer .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f2f1ed;
-  height: 10vh;
 }
 
 #footer a {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 0;
   text-align: center;
   color: #333;
   transition: .2s;
@@ -404,19 +405,19 @@ input[type="submit"] {
 /* media queries */
 
 @media (min-width: 1200px) {
-  body {
-    max-width: 1170px;
+  .container {
+    width: 1170px;
   }
 }
 
 @media (max-width: 1199px) {
-  body {
+  .container {
     max-width: 992px;
   }
 }
 
 @media (max-width: 991px) {
-  body {
+  .container {
     max-width: 768px;
   }
 
@@ -426,7 +427,7 @@ input[type="submit"] {
 }
 
 @media (max-width: 767px) {
-  body {
+  .container {
     max-width: 95vw;
   }
 
@@ -454,11 +455,12 @@ input[type="submit"] {
   #main-nav ul {
     display: none;
     flex-direction: column;
-    margin-top: 15px;
+    margin: 15px 0 0 0;
   }
 
-  #main-nav li {
-    align-self: flex-end;
+  #main-nav a {
+    font-size: 16px;
+    padding: 0;
   }
 
   #hamburger-menu:checked+ul {
@@ -480,8 +482,8 @@ input[type="submit"] {
   }
 }
 
-@media (max-width: 319px) {
-  a.button {
-    margin: 0 auto;
+@media (max-width: 337px) {
+  #footer .container {
+    max-width: 99vw;
   }
 }
